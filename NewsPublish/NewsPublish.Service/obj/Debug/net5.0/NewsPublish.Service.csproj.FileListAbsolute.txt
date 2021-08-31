@@ -1,0 +1,5 @@
+E:\MyPlace\.net\NewsPublish\NewsPublish\NewsPublish.Service\obj\Debug\net5.0\NewsPublish.Service.csproj.AssemblyReference.cache
+E:\MyPlace\.net\NewsPublish\NewsPublish\NewsPublish.Service\obj\Debug\net5.0\NewsPublish.Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\MyPlace\.net\NewsPublish\NewsPublish\NewsPublish.Service\obj\Debug\net5.0\NewsPublish.Service.AssemblyInfoInputs.cache
+E:\MyPlace\.net\NewsPublish\NewsPublish\NewsPublish.Service\obj\Debug\net5.0\NewsPublish.Service.AssemblyInfo.cs
+E:\MyPlace\.net\NewsPublish\NewsPublish\NewsPublish.Service\obj\Debug\net5.0\NewsPublish.Service.csproj.CoreCompileInputs.cache
