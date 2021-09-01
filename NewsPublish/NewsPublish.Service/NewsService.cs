@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using NewsPublish.Model.Entity;
 using NewsPublish.Model.Request;
 using NewsPublish.Model.Response;
@@ -108,6 +109,78 @@ namespace NewsPublish.Service
                 });
             }
             return response;
+        }
+
+        public ResponseModel AddNews(AddNews news)
+        {
+            var classify = this.GetOneNewsClassify(c => c.Id == news.NewsClassifyId);
+            if (classify == null)
+            {
+                return new ResponseModel() { code = 0, result = "The classify is not exist" };
+            }
+            else
+            {
+                var n = new News()
+                {
+                    NewsClassifyId = news.NewsClassifyId,
+                    Title = news.Title,
+                    Image = news.Image,
+                    Contents=news.Contents,
+                    PublishDate = DateTime.Now,
+                    Remark = news.Remark
+                };
+                _db.News.Add(n);
+                int i = _db.SaveChanges();
+                if (i>0)
+                {
+                    return new ResponseModel() { code = 200, result = "Add news success" };
+                }
+                else
+                {
+                    return new ResponseModel() { code = 0, result = "Add news failed" };
+                }
+            }
+        }
+
+        public ResponseModel GetOneNews(int id)
+        {
+            var news = _db.News.Include("NewsClassify").Include("NewsComment").FirstOrDefault(c => c.Id == id);
+            if (news == null)
+            {
+                return new ResponseModel() { code = 0, result = "The news is not exist" };
+            }
+            var response = new ResponseModel() { code = 200, result = "Get news success" };
+            response.data = new NewsModel()
+            {
+                Id = news.Id,
+                Title = news.Title,
+                Image = news.Image,
+                Contents = news.Contents,
+                ClassifyName = news.NewsClassify.Name,
+                PublishDate = news.PublishDate,
+                CommentCount=news.NewsComments.Count,
+                Remark = news.Remark
+            };
+            return response;
+        }
+
+        public ResponseModel DelOneNews(int id)
+        {
+            var news = _db.News.FirstOrDefault(c => c.Id == id);
+            if(news == null)
+            {
+                return new ResponseModel() { code = 0, result = "The news is not exist" };
+            }
+            _db.News.Remove(news);
+            int i = _db.SaveChanges();
+            if (i > 0)
+            {
+                return new ResponseModel() { code = 200, result = "Delete news success" };
+            }
+            else
+            {
+                return new ResponseModel() { code = 0, result = "Delete news failed" };
+            }
         }
     }
 }

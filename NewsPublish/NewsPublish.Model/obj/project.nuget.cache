@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F7+SpRmOwDBp5BFomkV+BJiRZQ9Vy7B2Q/eXzVGTNtYeXuHKB94bOBoeLEIuUyhBAHLnESMHlx55ZPg4+hH51A==",
+  "dgSpecHash": "ztHg4SD11p2QPiAszyS00kpZTHJU/b/uXPFAbKOxVu1+XxJghTXj9SPPBe53DCDszw2CFT9WQI/veFq2HdDnIw==",
   "success": true,
-  "projectFilePath": "E:\\MyPlace\\.net\\NewsPublish\\NewsPublish\\NewsPublish.Model\\NewsPublish.Model.csproj",
+  "projectFilePath": "E:\\MyPlace\\.net\\dotnet-learning\\NewsPublish\\NewsPublish.Model\\NewsPublish.Model.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

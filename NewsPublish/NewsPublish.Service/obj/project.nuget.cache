@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HhhlRpeCRGp8+IsYHtb/ZaIAYSDZyGhAsqCL6i3APnWJzU/wxExQm8gNSJe8nlnb8cJtWskH+yjpAgm6zsJ1jg==",
+  "dgSpecHash": "kqclptvk1gXAooGVWbJQnOCyHiPr5yL/ZUrM5sWSHMKXVAw84YE+yVlQJ8HaZ/hUemc9ELnJ3s56+1NzXHad2g==",
   "success": true,
-  "projectFilePath": "E:\\MyPlace\\.net\\NewsPublish\\NewsPublish\\NewsPublish.Service\\NewsPublish.Service.csproj",
+  "projectFilePath": "E:\\MyPlace\\.net\\dotnet-learning\\NewsPublish\\NewsPublish.Service\\NewsPublish.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\z1900\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\z1900\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

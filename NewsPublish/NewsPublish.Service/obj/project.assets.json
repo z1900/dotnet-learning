@@ -5723,11 +5723,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MyPlace\\.net\\NewsPublish\\NewsPublish\\NewsPublish.Service\\NewsPublish.Service.csproj",
+      "projectUniqueName": "E:\\MyPlace\\.net\\dotnet-learning\\NewsPublish\\NewsPublish.Service\\NewsPublish.Service.csproj",
       "projectName": "NewsPublish.Service",
-      "projectPath": "E:\\MyPlace\\.net\\NewsPublish\\NewsPublish\\NewsPublish.Service\\NewsPublish.Service.csproj",
+      "projectPath": "E:\\MyPlace\\.net\\dotnet-learning\\NewsPublish\\NewsPublish.Service\\NewsPublish.Service.csproj",
       "packagesPath": "C:\\Users\\z1900\\.nuget\\packages\\",
-      "outputPath": "E:\\MyPlace\\.net\\NewsPublish\\NewsPublish\\NewsPublish.Service\\obj\\",
+      "outputPath": "E:\\MyPlace\\.net\\dotnet-learning\\NewsPublish\\NewsPublish.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\z1900\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5744,8 +5744,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\MyPlace\\.net\\NewsPublish\\NewsPublish\\NewsPublish.Model\\NewsPublish.Model.csproj": {
-              "projectPath": "E:\\MyPlace\\.net\\NewsPublish\\NewsPublish\\NewsPublish.Model\\NewsPublish.Model.csproj"
+            "E:\\MyPlace\\.net\\dotnet-learning\\NewsPublish\\NewsPublish.Model\\NewsPublish.Model.csproj": {
+              "projectPath": "E:\\MyPlace\\.net\\dotnet-learning\\NewsPublish\\NewsPublish.Model\\NewsPublish.Model.csproj"
             }
           }
         }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MyPlace\\.net\\NewsPublish\\NewsPublish\\NewsPublish.Web\\NewsPublish.Web.csproj",
+      "projectUniqueName": "E:\\MyPlace\\.net\\dotnet-learning\\NewsPublish\\NewsPublish.Web\\NewsPublish.Web.csproj",
       "projectName": "NewsPublish.Web",
-      "projectPath": "E:\\MyPlace\\.net\\NewsPublish\\NewsPublish\\NewsPublish.Web\\NewsPublish.Web.csproj",
+      "projectPath": "E:\\MyPlace\\.net\\dotnet-learning\\NewsPublish\\NewsPublish.Web\\NewsPublish.Web.csproj",
       "packagesPath": "C:\\Users\\z1900\\.nuget\\packages\\",
-      "outputPath": "E:\\MyPlace\\.net\\NewsPublish\\NewsPublish\\NewsPublish.Web\\obj\\",
+      "outputPath": "E:\\MyPlace\\.net\\dotnet-learning\\NewsPublish\\NewsPublish.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\z1900\\AppData\\Roaming\\NuGet\\NuGet.Config",

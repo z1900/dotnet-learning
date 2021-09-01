@@ -10,3 +10,15 @@ E:\MyPlace\.net\NewsPublish\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\NewsP
 E:\MyPlace\.net\NewsPublish\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\NewsPublish.Model.dll
 E:\MyPlace\.net\NewsPublish\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\ref\NewsPublish.Model.dll
 E:\MyPlace\.net\NewsPublish\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\NewsPublish.Model.pdb
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\bin\Debug\net5.0\NewsPublish.Model.deps.json
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\bin\Debug\net5.0\NewsPublish.Model.dll
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\bin\Debug\net5.0\ref\NewsPublish.Model.dll
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\bin\Debug\net5.0\NewsPublish.Model.pdb
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\NewsPublish.Model.csproj.AssemblyReference.cache
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\NewsPublish.Model.GeneratedMSBuildEditorConfig.editorconfig
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\NewsPublish.Model.AssemblyInfoInputs.cache
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\NewsPublish.Model.AssemblyInfo.cs
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\NewsPublish.Model.csproj.CoreCompileInputs.cache
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\NewsPublish.Model.dll
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\ref\NewsPublish.Model.dll
+E:\MyPlace\.net\dotnet-learning\NewsPublish\NewsPublish.Model\obj\Debug\net5.0\NewsPublish.Model.pdb
