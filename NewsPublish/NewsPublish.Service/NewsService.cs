@@ -182,5 +182,87 @@ namespace NewsPublish.Service
                 return new ResponseModel() { code = 0, result = "Delete news failed" };
             }
         }
+
+        public ResponseModel NewsPageQuery(int pageSize, int pageIndex, out int total, List<Expression<Func<News, bool>>> where)
+        {
+            var list = _db.News.Include("NewsClassify").Include("NewsComment");
+            foreach(var item in where)
+            {
+                list = list.Where(item);
+            }
+            total = list.Count();
+            var pageData = list.OrderByDescending(c => c.PublishDate).Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToList();
+            var response = new ResponseModel() { code = 200, result = "The news get success by pagination" };
+            response.data = new List<NewsModel>();
+            foreach(var news in pageData)
+            {
+                response.data.Add(new NewsModel()
+                {
+                    Id = news.Id,
+                    Title = news.Title,
+                    Image = news.Image,
+                    Contents = news.Contents,
+                    ClassifyName = news.NewsClassify.Name,
+                    PublishDate = news.PublishDate,
+                    CommentCount = news.NewsComments.Count(),
+                    Remark = news.Remark
+                });
+            }
+            return response;
+        }
+
+        public ResponseModel GetNewsList(Expression<Func<News, bool>> where, int topCount)
+        {
+            var list = _db.News.Include("NewsClassify").Include("NewsComment").Where(where).OrderByDescending(c => c.PublishDate)
+                .Take(topCount).ToList();
+            var response = new ResponseModel()
+            {
+                code = 200,
+                result = "Get the news by condition success"
+            };
+            response.data = new List<NewsModel>();
+            foreach(var news in list)
+            {
+                response.data.Add(new NewsModel()
+                {
+                    Id = news.Id,
+                    Title = news.Title,
+                    Image = news.Image,
+                    Contents = news.Contents,
+                    ClassifyName = news.NewsClassify.Name,
+                    PublishDate = news.PublishDate,
+                    CommentCount = news.NewsComments.Count(),
+                    Remark = news.Remark
+                });
+            }
+            return response;
+        }
+
+        public ResponseModel GetNewCommentNews(Expression<Func<News, bool>>, int topCount)
+        {
+            var newsIds = _db.NewsComment.OrderByDescending(c => c.AddTime).GroupBy(c => c.NewsId).Select(c => c.Key).Take(topCount);
+            var list = _db.News.Include("NewsClassify").Include("NewsComment").Where(c => newsIds.Contains(c.Id)).OrderByDescending(c => c.PublishDate).ToList();
+            var response = new ResponseModel()
+            {
+                code = 200,
+                result = "Get the latest news success"
+            };
+            response.data = new List<NewsModel>();
+            foreach (var news in list)
+            {
+                response.data.Add(new NewsModel()
+                {
+                    Id = news.Id,
+                    Title = news.Title,
+                    Image = news.Image,
+                    Contents = news.Contents,
+                    ClassifyName = news.NewsClassify.Name,
+                    PublishDate = news.PublishDate,
+                    CommentCount = news.NewsComments.Count(),
+                    Remark = news.Remark
+                });
+            }
+            return response;
+        }
     }
 }
