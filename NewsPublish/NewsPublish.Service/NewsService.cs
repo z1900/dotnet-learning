@@ -238,7 +238,7 @@ namespace NewsPublish.Service
             return response;
         }
 
-        public ResponseModel GetNewCommentNews(Expression<Func<News, bool>>, int topCount)
+        public ResponseModel GetNewCommentNews(Expression<Func<News, bool>> where, int topCount)
         {
             var newsIds = _db.NewsComment.OrderByDescending(c => c.AddTime).GroupBy(c => c.NewsId).Select(c => c.Key).Take(topCount);
             var list = _db.News.Include("NewsClassify").Include("NewsComment").Where(c => newsIds.Contains(c.Id)).OrderByDescending(c => c.PublishDate).ToList();
@@ -260,6 +260,50 @@ namespace NewsPublish.Service
                     PublishDate = news.PublishDate,
                     CommentCount = news.NewsComments.Count(),
                     Remark = news.Remark
+                });
+            }
+            return response;
+        }
+
+        public ResponseModel GetSearchOneNews(Expression<Func<News, bool>> where)
+        {
+            var news = _db.News.Where(where).FirstOrDefault();
+            if (news == null)
+            {
+                return new ResponseModel { code = 0, result = "Search news faided" };
+            }
+            return new ResponseModel { code = 200, result = "Search news success", data = news.Id };
+        }
+
+        public ResponseModel GetNewsCount(Expression<Func<News, bool>> where)
+        {
+            var count = _db.News.Where(where).Count();
+            return new ResponseModel { code = 200, result = "Get news count success", data = count };
+        }
+
+        public ResponseModel GetRecommendNewsList(int newsId)
+        {
+            var news = _db.News.FirstOrDefault(c => c.Id == newsId);
+            if (news == null)
+            {
+                return new ResponseModel { code = 0, result = "Get recomment newsList failed" };
+            }
+            var newsList = _db.News.Include("NewsComment").Where(c => c.NewsClassifyId == news.NewsClassifyId && c.Id != newsId).OrderByDescending(c => c.PublishDate)
+                .OrderByDescending(c => c.NewsComments.Count()).Take(6).ToList();
+            var response = new ResponseModel { code = 200, result = "Get recomment news list sccess" };
+            response.data = new List<NewsModel>();
+            foreach(var n in newsList)
+            {
+                response.data.Add(new NewsModel
+                {
+                    Id = n.Id,
+                    Title = n.Title,
+                    Image = n.Image,
+                    Contents = n.Contents,
+                    ClassifyName = n.NewsClassify.Name,
+                    PublishDate = n.PublishDate,
+                    CommentCount = n.NewsComments.Count(),
+                    Remark = n.Remark
                 });
             }
             return response;
